@@ -16,6 +16,6 @@ app.use('/friend', userRoutes)
 
 /**************************** SERVER INIT ******************************/
 
-app.listen(3003, () => {
+app.listen(process.env.PORT || 5000 , () => {
    console.log("Server running on port 3003")
 })
