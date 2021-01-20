@@ -1,4 +1,4 @@
-import { BaseDataBase } from './BaseDataBase';
+import  BaseDataBase  from './BaseDataBase';
 
 
 class UserDatabase extends BaseDataBase {

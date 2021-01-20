@@ -1,5 +1,5 @@
 import { Post, POST_TYPES } from "../Model/Post"
-import { BaseDataBase } from './BaseDataBase';
+import  BaseDataBase  from './BaseDataBase';
 
 
 
