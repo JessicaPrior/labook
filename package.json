@@ -5,9 +5,9 @@
    "main": "index.js",
    "scripts": {
       "sql-setup": "tsc && node ./build/mySqlSetup.js",
-      "start": "npm run build && node --inspect ./build/src/index.js",
+      "start": "tsc && node ./build/index.js",
       "dev": "clear && ts-node-dev ./src/index.ts",
-      "build": "clear && echo \"Transpiling files...\" && tsc && echo \"Done!\" ",
+      "build": "tsc",
       "test": "jest"
    },
    "keywords": [],
@@ -32,5 +32,5 @@
       "ts-node-dev": "^1.0.0-pre.63",
       "typescript": "^4.0.3"
    },
-   "devDependencies": { }
+   "devDependencies": {}
 }
