@@ -1,0 +1,10 @@
+# Create User
+POST https://samurai-looping-music.herokuapp.com/user/signup
+Content-Type: application/json
+
+{
+    "name": "Mel lão",
+    "email": "melao@not.com",
+    "nickname": "Melao is not Melancia",
+    "password": "123456789"
+}
