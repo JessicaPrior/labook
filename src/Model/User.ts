@@ -2,6 +2,12 @@ export type AuthenticationData = {
     id: string
 }
 
+export type createUser = {
+    name: string,
+    email: string,
+    password: string
+}
+
 export class User {
 
     constructor(
@@ -17,15 +23,3 @@ export class User {
     public getPassword = (): string => this.password
 }
 
-export class inputUser {
-
-    constructor(
-        private name: string,
-        private email: string,
-        private password: string
-    ) { }
-
-    public inName = (): string => this.name
-    public inEmail = (): string => this.email
-    public inPassword = (): string => this.password
-}

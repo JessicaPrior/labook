@@ -1,5 +1,5 @@
 import { userDatabase } from '../Data/userDataBase';
-import { User, inputUser } from '../Model/User';
+import { User, createUser } from '../Model/User';
 import { generateToken } from "../Services/authenticator"
 import { compare, hash } from "../Services/hashManager"
 import { generateId } from "../Services/idGenerator"
@@ -7,18 +7,18 @@ import { generateId } from "../Services/idGenerator"
 
 class UserBusiness {
 
-    public login = async (input: inputUser) => {
+    public login = async (input: createUser) => {
         try {
             let message
 
-            const user: User = await userDatabase.login(input.inEmail())
+            const user: User = await userDatabase.login(input.email)
             const token: string = generateToken({ id: user.getId() })
 
-            if (!input.inEmail() || !input.inPassword()) {
+            if (!input.name || !input.password) {
                 throw new Error('"email" and "password" must be provided')
             }
 
-            const passwordIsCorrect: boolean = await compare(input.inPassword(), user.getPassword())
+            const passwordIsCorrect: boolean = await compare(input.password, user.getPassword())
 
             if (!passwordIsCorrect) {
                 message = "Invalid credentials"
@@ -37,29 +37,28 @@ class UserBusiness {
         }
     }
 
-    public insertUser = async (input: inputUser) => {
+    public insertUser = async (input: createUser) => {
         try {
-    
-            if (!input.inName() || !input.inEmail() || !input.inPassword()) {
+            if (!input.name || !input.email || !input.password) {
                 throw new Error('"name", "email" and "password" must be provided')
             }
     
-            if(input.inEmail().indexOf("@") === -1){
+            if(input.email.indexOf("@") === -1){
                 throw new Error("Invalid email");
             }
     
-            if(input.inPassword().length < 6){
+            if(input.password.length < 6){
                 throw new Error("Password must contain at least 6 characters");
             }
     
             const id: string = generateId()
     
-            const cypherPassword = await hash(input.inPassword());
+            const cypherPassword = await hash(input.password);
     
             await userDatabase.insertUser (
                 id,
-                input.inName(),
-                input.inEmail(),
+                input.name,
+                input.email,
                 cypherPassword
             )
     
