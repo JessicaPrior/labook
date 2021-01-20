@@ -3,8 +3,8 @@ POST https://labook.herokuapp.com/user/signup
 Content-Type: application/json
 
 {
-    "name": "Mel lão",
-    "email": "melao@not.com",
+    "name": "jess",
+    "email": "jess@not.com",
     "password": "123456789"
 }
 
