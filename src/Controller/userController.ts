@@ -1,5 +1,6 @@
 import {Request, Response} from 'express';
 import { userBusiness } from '../Business/userBusiness';
+import { inputUser } from '../Model/User';
 
 class UserController {
 
@@ -8,11 +9,11 @@ class UserController {
         res: Response
     ) =>{
         try {
-            const loginData: any= {
-                inEmail: req.body.email,
-                inPassword: req.body.password
+            const loginData: inputUser = {
+                email: req.body.email,
+                password: req.body.password
             }
-    
+
             const token = await userBusiness.login(loginData)
     
             res.status(200).send({

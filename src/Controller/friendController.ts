@@ -13,7 +13,7 @@ class FriendController{
     
             const {id} = req.params
     
-            const tokenId: AuthenticationData = await getTokenData( input.authorization )
+            const tokenId: AuthenticationData = getTokenData( input.authorization )
     
             await friendBusiness.inviteFriendBusiness(tokenId.id, id )
     
@@ -32,7 +32,7 @@ class FriendController{
     
             const {id} = req.params
     
-            const tokenId: AuthenticationData = await getTokenData( input.authorization )
+            const tokenId: AuthenticationData = getTokenData( input.authorization )
     
             await friendBusiness.unFriendBusiness( id )
     

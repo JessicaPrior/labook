@@ -3,17 +3,62 @@ POST https://labook.herokuapp.com/user/signup
 Content-Type: application/json
 
 {
-    "name": "jess",
-    "email": "jess@not.com",
+    "name": "coiote",
+    "email": "coiote@not.com",
     "password": "123456789"
 }
 
-### Create Use
-POST http://localhost:3003/user/signup
+### Login
+POST https://labook.herokuapp.com/user/login
 Content-Type: application/json
 
 {
-    "name": "Mel lão",
-    "email": "melao@not.com",
+    "email": "coiote@not.com",
     "password": "123456789"
 }
+
+### Create Post
+POST https://labook.herokuapp.com/post/create
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk3MTZiOTc4LWY5MWItNDNmNC05MTc2LWQ1NjI5M2M5ZmYzNSIsImlhdCI6MTYxMTIzNDA1NSwiZXhwIjoxNjExMzIwNDU1fQ.EPhaAIh0RZRPdp6Fj7xz3kCEFBhhtWkDUmzrTbMimpI
+Content-Type: application/json
+
+{
+    "photo": "https://ibb.co/XLF7h40",
+    "description": "Circuito na lagoa",
+    "type": "event"
+}
+
+### Select Post
+GET https://labook.herokuapp.com/post/2b64430b-c4f4-43d2-98f8-cd211ed74921
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk3MTZiOTc4LWY5MWItNDNmNC05MTc2LWQ1NjI5M2M5ZmYzNSIsImlhdCI6MTYxMTIzNDA1NSwiZXhwIjoxNjExMzIwNDU1fQ.EPhaAIh0RZRPdp6Fj7xz3kCEFBhhtWkDUmzrTbMimpI
+Content-Type: application/json
+
+{ }
+
+### Select All Feed
+GET https://labook.herokuapp.com/feed/all
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk3MTZiOTc4LWY5MWItNDNmNC05MTc2LWQ1NjI5M2M5ZmYzNSIsImlhdCI6MTYxMTIzNDA1NSwiZXhwIjoxNjExMzIwNDU1fQ.EPhaAIh0RZRPdp6Fj7xz3kCEFBhhtWkDUmzrTbMimpI
+Content-Type: application/json
+
+{ }
+
+### Select Event
+GET https://labook.herokuapp.com/feed/type?type=event
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk3MTZiOTc4LWY5MWItNDNmNC05MTc2LWQ1NjI5M2M5ZmYzNSIsImlhdCI6MTYxMTIzNDA1NSwiZXhwIjoxNjExMzIwNDU1fQ.EPhaAIh0RZRPdp6Fj7xz3kCEFBhhtWkDUmzrTbMimpI
+Content-Type: application/json
+
+{ }
+
+### Invite Friend
+POST https://labook.herokuapp.com/friend/2de0715a-68fa-4339-9407-445ac39eea46
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmMGYxMDc3LWYwNjEtNDZhMC1iNzliLWY4MmUwOWRiNDcwOSIsImlhdCI6MTYxMTY3NDMxMSwiZXhwIjoxNjExNzYwNzExfQ.voI_UZyPOHp7iQUsXujnPPQs11qFQ5B2ZB_9ReAKkcY
+Content-Type: application/json
+
+{ }
+
+### UnFriend
+DELETE https://labook.herokuapp.com/friend/2de0715a-68fa-4339-9407-445ac39eea46
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmMGYxMDc3LWYwNjEtNDZhMC1iNzliLWY4MmUwOWRiNDcwOSIsImlhdCI6MTYxMTY3NDMxMSwiZXhwIjoxNjExNzYwNzExfQ.voI_UZyPOHp7iQUsXujnPPQs11qFQ5B2ZB_9ReAKkcY
+Content-Type: application/json
+
+{ }

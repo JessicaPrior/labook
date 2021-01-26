@@ -8,6 +8,11 @@ export type createUser = {
     password: string
 }
 
+export type inputUser = {
+    email: string,
+    password: string
+}
+
 export class User {
 
     constructor(

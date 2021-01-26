@@ -12,10 +12,10 @@ class PostController{
                 description: req.body.description,
                 type: req.body.type
             }
-             const {authorization} = req.headers
+            const {authorization} = req.headers
 
             const tokenId: AuthenticationData = await getTokenData(authorization as string)
-    
+ 
             await postBusiness.insertPostBusiness(input, tokenId.id)
     
             res.status(200).send({message: "Success!"})

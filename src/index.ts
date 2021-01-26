@@ -3,6 +3,9 @@
 import express, { Express } from "express"
 import cors from "cors"
 import { userRoutes } from './Routes/userRoutes';
+import { postRoutes } from "./Routes/postRoutes";
+import { friendRoutes } from "./Routes/friendRoutes";
+import { feedRoutes } from "./Routes/feedRoutes";
 
 
 /**************************** CONFIG ******************************/
@@ -11,8 +14,9 @@ const app: Express = express()
 app.use(express.json())
 app.use(cors())
 app.use('/user', userRoutes)
-app.use('/post', userRoutes)
-app.use('/friend', userRoutes)
+app.use('/post', postRoutes)
+app.use('/friend', friendRoutes)
+app.use('/feed', feedRoutes)
 
 /**************************** SERVER INIT ******************************/
 

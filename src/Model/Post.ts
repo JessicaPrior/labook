@@ -22,16 +22,9 @@ export class Post {
    public getAuthorId = (): string => this.authorId
 }
 
-export class inputPost {
-   
-   constructor(
-      private photo: string,
-      private description: string,
-      private type: POST_TYPES
-   ) {   }
-
-   public inPhoto = (): string => this.photo
-   public inDescription = (): string => this.description
-   public inType = (): POST_TYPES => this.type
+export type inputPost = {
+   photo: string,
+   description: string,
+   type: POST_TYPES
 }
 

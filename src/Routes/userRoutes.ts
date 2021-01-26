@@ -11,9 +11,9 @@ userRoutes.post('/signup', userController.insertUser)
 userRoutes.post('/login', userController.login)
 
 userRoutes.post('/create', postController.insertPost)
-userRoutes.get('/all', postController.selectPosts)
+userRoutes.get('/post/:id', postController.selectPosts)
 
-userRoutes.get('/search', feedController.selectAllFeed)
+userRoutes.get('/all', feedController.selectAllFeed)
 userRoutes.get('/:id', feedController.selectTypeFeed)
 
 

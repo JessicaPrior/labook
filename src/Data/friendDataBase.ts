@@ -3,7 +3,7 @@ import  BaseDataBase  from './BaseDataBase';
 
 class FriendDataBase extends BaseDataBase {
 
-    private tableName: string = "labook_users"
+    private tableName: string = "Friend_list"
 
     public async insertFriend(id_user: string, id_friend: string) {
         try {

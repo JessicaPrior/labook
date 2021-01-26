@@ -8,7 +8,7 @@ class FeedDataBase extends BaseDataBase {
             const feed = await BaseDataBase.connection.raw(`
                  SELECT * FROM labook_posts ORDER BY created_at DESC
             `)
-             
+           console.log(feed) 
              return feed[0]
      
          } catch (error) {

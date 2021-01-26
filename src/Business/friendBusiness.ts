@@ -5,6 +5,7 @@ class FriendBusiness {
 
     public async inviteFriendBusiness(tokenId: string, id: any) {
         try {
+            console.log(tokenId)
             await friendDataBase.insertFriend(
                 tokenId,
                 id

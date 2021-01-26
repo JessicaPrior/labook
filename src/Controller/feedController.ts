@@ -34,7 +34,7 @@ class FeedController {
                 type: req.query.type,
                 authorization: req.headers.authorization as string
             }
-    
+   
             const posts = await feedBusiness.typeEventBusiness(input)
     
             res.status(200).send({

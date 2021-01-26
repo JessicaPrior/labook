@@ -13,9 +13,9 @@ class PostBusiness{
     
             await postDataBase.insertPost (
                 id,
-                input.inPhoto(),
-                input.inDescription(),
-                input.inType(),
+                input.photo,
+                input.description,
+                input.type,
                 tokenId 
             )
     

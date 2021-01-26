@@ -5,7 +5,7 @@ import  BaseDataBase  from './BaseDataBase';
 
 class PostDataBase extends BaseDataBase{
 
-    private tableName: string = "labook_users"
+    private tableName: string = "labook_posts"
 
     public async insertPost(
         id: string,
@@ -15,6 +15,7 @@ class PostDataBase extends BaseDataBase{
         author_id: string
     ) {
         try {
+            
             await BaseDataBase.connection(this.tableName)
                 .insert({
                     id,
