@@ -30,7 +30,7 @@ Content-Type: application/json
 
 ### Select Post
 GET https://labook.herokuapp.com/post/2b64430b-c4f4-43d2-98f8-cd211ed74921
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk3MTZiOTc4LWY5MWItNDNmNC05MTc2LWQ1NjI5M2M5ZmYzNSIsImlhdCI6MTYxMTIzNDA1NSwiZXhwIjoxNjExMzIwNDU1fQ.EPhaAIh0RZRPdp6Fj7xz3kCEFBhhtWkDUmzrTbMimpI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmMGYxMDc3LWYwNjEtNDZhMC1iNzliLWY4MmUwOWRiNDcwOSIsImlhdCI6MTYxMTY3ODU2MCwiZXhwIjoxNjExNzY0OTYwfQ.aE6E7ZY1JtJUbQnub31WzzYrQU6gOp4n7hD43a02pMg
 Content-Type: application/json
 
 { }
@@ -44,7 +44,7 @@ Content-Type: application/json
 
 ### Select Event
 GET https://labook.herokuapp.com/feed/type?type=event
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk3MTZiOTc4LWY5MWItNDNmNC05MTc2LWQ1NjI5M2M5ZmYzNSIsImlhdCI6MTYxMTIzNDA1NSwiZXhwIjoxNjExMzIwNDU1fQ.EPhaAIh0RZRPdp6Fj7xz3kCEFBhhtWkDUmzrTbMimpI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmMGYxMDc3LWYwNjEtNDZhMC1iNzliLWY4MmUwOWRiNDcwOSIsImlhdCI6MTYxMTY3ODU2MCwiZXhwIjoxNjExNzY0OTYwfQ.aE6E7ZY1JtJUbQnub31WzzYrQU6gOp4n7hD43a02pMg
 Content-Type: application/json
 
 { }

@@ -1,5 +1,7 @@
 // import connection from "./Data/BaseDataBase"
 
+// Para retirar os comentarios e executar o código, basta selecionar a parte desejada e precionar CTRL+;
+
 // async function createTables(){
 //    try {
 //       await connection.raw(`
@@ -23,6 +25,16 @@
 //          )
 //       `)
 
+//        await connection.raw(`
+//            CREATE TABLE Friends_list(
+//                id_user VARCHAR(64) NOT NULL,
+//                id_friend VARCHAR(64) NOT NULL,
+//                FOREIGN KEY (id_user) REFERENCES labook_users(id),
+//                FOREIGN KEY (id_friend) REFERENCES labook_users(id),
+//                PRIMARY KEY (id_user, id_friend)
+//            )
+//        `)
+
 //       console.log("MySql setup completed!")
 //    } catch (error) {
 //       console.log(error)
@@ -30,3 +42,4 @@
 // }
 
 // createTables()
+
