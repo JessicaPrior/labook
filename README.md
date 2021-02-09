@@ -32,6 +32,6 @@ npm install @types/express --save-dev
 npm install @types/cors --save-dev
 ```
 Existe um arquivo chamado *.env.example*, que tem as variáveis para configurar o banco de dados local. <br/>
-Também tem outro chamado *mySqlSetup*, que pode ser executado para criar as tabelas com os campos corretos para a aplicação.  
+Também tem outro chamado *mySqlSetup*, com schemas das tabelas que foram criadas.  
 
-Por fim, pode ser executado com url local *localhost:3003* (contém um arquivo *.rest* que pode ser utilizado para rodar, não precisando utilizar Postman) ou pela que foi feito deploy na plataforma Heroku.
+Por fim, pode ser executado com url local *http://localhost:3003/* (contém um arquivo *.rest* que pode ser utilizado para rodar, não precisando utilizar Postman) ou pela que foi feito deploy na plataforma Heroku.
